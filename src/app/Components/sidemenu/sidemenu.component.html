@@ -1,0 +1,44 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  </head>
+
+<div class="menuIzquierda" [style.opacity]="visibleMenu ? '0' : '1'"
+    [style.pointerEvents]="visibleMenu ? 'none' : 'all'">
+    <button (click)="setVisibilityMenu()" class="Menu">
+        <img src="https://cdn-icons-png.flaticon.com/512/5973/5973800.png" alt="Menu Icon">
+    </button>
+
+</div>
+
+<div class="contenedor">
+    <div class="sidemenu-container" [style.backgroundColor]="theme" [style.width]="widthMenu + '%' "
+        [style.display]="visibleMenu ? 'flex' : 'none'">
+
+
+        <div class="item spooky">
+            <img src="https://cdn-icons-png.flaticon.com/128/8484/8484079.png" alt="Perfil.png">
+            <p> {{userName}} </p>
+            <button class="back" (click)="setVisibilityMenu()">
+                <img src="https://w7.pngwing.com/pngs/332/713/png-transparent-museum-belvedere-vienna-symbol-font-left-arrow-miscellaneous-angle-photography.png"
+                    alt="Back Icon">
+            </button>
+        </div>
+
+        <div class="item spooky">
+            <p> <span>🎃</span>Dashboard</p>
+        </div>
+
+        <div class="item spooky">
+            <p><span>🧟‍♂️</span>Profile</p>
+        </div>
+
+        <div class="item spooky">
+            <button class="btn" (click)="setThemeColor('purple')">Change Color</button>
+            <button class="btn" (click)="setSizesMenu()">Change Size</button>
+        </div>
+    </div>
+</div>
+
+<div class="texto">
+    <p>Ejercicio 2</p>
+</div>
